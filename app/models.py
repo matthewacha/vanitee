@@ -11,7 +11,9 @@ class User(db.Model):
     last_name = db.Column(db.String(60))
     email = db.Column(db.String(60), unique=True)
     password = db.Column(db.String(300))
-    post_id = db.Column(db.Integer, db.ForeignKey('posts.id'))
+    post_id = db.relationship('User', backref='posts',
+                                 lazy='dynamic')
+    
     def __init__(self, first_name, last_name, email, password):
         self.first_name = first_name
         self.last_name = last_name
@@ -29,6 +31,7 @@ class Post(db.Model):
     image_url = db.Column(db.String(100), nullable=False, unique=True)
     user_id = db.relationship('User', backref='posts',
                                  lazy='dynamic')
+    user_id = db.Column(db.Integer, db.ForeignKey('posts.id'))
     def __init__(self, name, description):
         self.name = name
         self.description = description
