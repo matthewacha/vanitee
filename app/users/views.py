@@ -8,8 +8,10 @@ def index():
 
 @users.route('/signup', methods = ['GET','POST'])
 def signup():
-    return render_template('signup.html', form = form, title = 'Signup')
+    # return render_template('signup.html', form=form, title = 'Signup')
+    return "hello world"
 
 @users.route('/login', methods = ['GET','POST'])
 def login():
-    return render_template('login.html', form = form, title = 'login')
+    # return render_template('login.html', form = form, title = 'login')
+    pass

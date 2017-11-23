@@ -1,0 +1,5 @@
+.DS_Store
+.vscode/
+config.pyc
+db.db
+venv/
