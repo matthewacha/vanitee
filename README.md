@@ -27,6 +27,10 @@ For software developers to use you will need the following pre-installed:
 
         $ git clone https://github.com/matthewacha/vanitee.git
 
+## Clone thr repo
+
+        $ git clone https://github.com/matthewacha/vanitee.git
+
 RUN APP
 =======
 * prepare virtual environment
