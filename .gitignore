@@ -2,4 +2,8 @@
 .vscode/
 config.pyc
 db.db
-venv/
+venv
+*.pyc
+app/bower_components/
+app/package.json
+package-lock.json

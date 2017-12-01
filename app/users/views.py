@@ -4,12 +4,12 @@ users = Blueprint('users', __name__, template_folder = 'templates')
 
 @users.route('/')
 def index():
-    return redirect(url_for('users.signup'))
+    return render_template('index.html', title = 'Vanitee')
 
 @users.route('/signup', methods = ['GET','POST'])
 def signup():
-    # return render_template('signup.html', form=form, title = 'Signup')
-    return "hello world"
+    if request.method=='GET':
+        return render_template('signup.html', title = 'Signup')
 
 @users.route('/login', methods = ['GET','POST'])
 def login():
