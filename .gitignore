@@ -2,4 +2,5 @@
 .vscode/
 config.pyc
 db.db
-venv/
+venv
+*.pyc
