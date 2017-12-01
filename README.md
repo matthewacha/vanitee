@@ -3,11 +3,10 @@ Everything is vanitee!!
 
 Table of contents
 =================
-1.Introduction
-2.setup
-3.Run app
-4.requirements
-5.author
+* Introduction
+* setup
+* Run app
+* requirements
 
 
 INTRODUCTION
@@ -20,43 +19,51 @@ SETUP
 =====
 This the production stage and all hands are welcome.
 For software developers to use you will need the following pre-installed:
-1.python 2.7
-2.pip 9.0.1
-3.Node.js
+* python 2.7
+* pip 9.0.1
+* Node.js
+
+## Clone the repo
+
+        $ git clone https://github.com/matthewacha/vanitee.git
 
 RUN APP
 =======
-First clone the app from here
-$git clone <url>
+* prepare virtual environment
+  (with virtualenv you get pip, we'll use it soon to install requirements):
 
-install virtual environment:
-windows:
-$ virtualenv venv
-
-install dependencies:
-$pip install -r requirements.txt
-
-For node/javascript:
+        $ cd vanitee
+        $ virtualenv --python=python2.7 venv
+        $ source venv/bin/activate
 
 
-run tests:
-For python code:
-$coverage run tests.py
+* install requirements (Flask, ...) into virtualenv:
+
+        $ pip install -r requirements.txt
+
+* create database tables
+
+        $ python manage.py init
+        $ python manage.py migrate
+
+* run development server:
+
+        $ ./manage.py runserver
+
+* The site should now be running at `http://localhost:8000
+
+
+## run tests:
+
+* For python code:
+
+        $ coverage run tests.py
 
 for javascript:
-$node tests.js
+
+        $ node tests.js
 
 check coverage:
-$istanbul cover tests.js
 
-
-run the app:
-$python run.py
-
-The app will run on server ip 127.0.0.1:5000/
-
-Go to your web browser and enter the above IP address,
-
-
-
-
+        $ istanbul cover tests.js
+        
