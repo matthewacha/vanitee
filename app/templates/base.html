@@ -1,27 +1,35 @@
-<!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <title>{{title}}</title>
-		<meta charset="utf-8">
-	    <link rel = 'stylesheet' href=''>
-	    <link rel='stylesheet' type='text/css' href=''>
-	</head>
-    <body>
-	    <div id = 'nav'>
-		     <nav class="navbar navbar-inverse">
-                 <div class="container-fluid">
-                     <div class="navbar-header">
-                     <a class="navbar-brand" href="/signup">Vanitee</a>
-                     </div>
-    
-                         <ul class="nav navbar-nav navbar-right">
-	                         {%block top%}{%endblock%}
 
-                         </ul>
-                 </div>
-             </nav>
-		</div>
-		{%block body%}
-		{%endblock%}
-    </body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>{{title}}</title>
+    <link rel=icon href=/favicon.png>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import bower materialize and font awesome -->
+    
+    <link type="text/css" rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/bower_components/materialize/dist/css/materialize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/bower_components/materialize-social/materialize-social.css"  media="screen,projection"/>
+
+    <!-- custom styles -->
+    <link type="text/css" rel="stylesheet" href="/static/css/index.css"  media="screen,projection"/>
+  </head>
+
+  <body>
+
+    {%block body%}
+    {%endblock%}
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower_components/materialize/dist/js/materialize.min.js"></script>
+  </body>
 </html>

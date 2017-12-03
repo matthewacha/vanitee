@@ -1,0 +1,26 @@
+{
+  "name": "Vanitee",
+  "homepage": "https://github.com/matthewacha/vanitee",
+  "description": "Everything is vanity",
+  "main": "vanitee",
+  "keywords": [
+    "app"
+  ],
+  "authors": [
+    "Wacha B & M"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "materialize": "^0.100.2",
+	"materialize-social",
+	"jquery":"^2.1.4"
+  }
+}

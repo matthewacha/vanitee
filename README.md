@@ -31,6 +31,14 @@ For software developers to use you will need the following pre-installed:
 
         $ git clone https://github.com/matthewacha/vanitee.git
 
+## Clone thr repo
+
+        $ git clone https://github.com/matthewacha/vanitee.git
+
+## Clone thr repo
+
+        $ git clone https://github.com/matthewacha/vanitee.git
+
 RUN APP
 =======
 * prepare virtual environment
@@ -39,7 +47,6 @@ RUN APP
         $ cd vanitee
         $ virtualenv --python=python2.7 venv
         $ source venv/bin/activate
-
 
 * install requirements (Flask, ...) into virtualenv:
 
@@ -50,11 +57,17 @@ RUN APP
         $ python manage.py init
         $ python manage.py migrate
 
+* installing bower materialize and font awesome components
+
+        $ cd app
+        $ npm install --save materialize-social
+        $ bower install --save materialize-social
+
 * run development server:
 
         $ ./manage.py runserver
 
-* The site should now be running at `http://localhost:8000
+The site should now be running at `http://localhost:5000
 
 
 ## run tests:

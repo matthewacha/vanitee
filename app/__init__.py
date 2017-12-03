@@ -2,6 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from config import config
+from flask_bower import Bower
 
 # create the flask application
 def create_application(environment):
@@ -10,6 +11,7 @@ def create_application(environment):
     return app
 
 app = create_application("development")
+Bower(app)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
